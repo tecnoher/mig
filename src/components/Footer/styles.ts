@@ -4,9 +4,10 @@ import { isAbsolute } from "path";
 const useStyles = makeStyles({
   footer: {
     backgroundColor: "#363636",
+    marginTop: "auto",
   },
   mainCardsContainer: {
-    minHeight: "300px",
+    minHeight: "250px",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-evenly",

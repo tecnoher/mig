@@ -2,18 +2,18 @@ import { makeStyles } from "@material-ui/core/styles";
 import { isAbsolute } from "path";
 
 const useStyles = makeStyles({
-  parent: { 
+  parent: {
     display: "flex",
     flexDirection: "column",
     height: "100vh",
-    backgroundColor: '#363636'
+    backgroundColor: "#222222",
   },
-  main: { 
+  main: {
     display: "flex",
-    flexGrow: 1
-  }, 
-  content: { 
-    flexGrow: 1
+    flexGrow: 1,
+  },
+  content: {
+    flexGrow: 1,
   },
   child: {
     display: "flex",
@@ -31,7 +31,7 @@ const useStyles = makeStyles({
   body: {
     backgroundColor: "#282c35",
     fontFamily: "Verdana",
-    fontWeight: 600
+    fontWeight: 600,
   },
 });
 

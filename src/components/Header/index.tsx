@@ -1,5 +1,5 @@
 import Container from "@material-ui/core/Container";
-import React from "react";
+import React, { useState } from "react";
 import PersonIcon from "@material-ui/icons/Person";
 import Typography from "@mui/material/Typography";
 import { Box } from "@material-ui/core";
@@ -12,6 +12,7 @@ interface Links {
 
 //const Header: React.FC<HeaderProps> = (props) => {
 const Header: React.FC = (props) => {
+  const [showMenu, setShowMenu] = useState<boolean>(false);
   const classes = useStyles();
 
   const links: Links[] = [
@@ -39,9 +40,26 @@ const Header: React.FC = (props) => {
               );
             })}
           </Box>
-          <Box>
+          <Box onClick={() => setShowMenu(!showMenu)}>
             <PersonIcon fontSize="large" className={classes.icon} />
           </Box>
+        </Box>
+        <Box
+          className={
+            showMenu
+              ? classes.hamburguerLinkOpened
+              : classes.hamburguerLinkClosed
+          }
+        >
+          {links.map((item, index) => {
+            return (
+              <Box key={index} className={classes.linkButton}>
+                <Typography variant="body1" className={classes.linkText}>
+                  {item.linkName}
+                </Typography>
+              </Box>
+            );
+          })}
         </Box>
       </Container>
     </header>

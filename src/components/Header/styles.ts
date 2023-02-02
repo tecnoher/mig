@@ -45,6 +45,10 @@ const useStyles = makeStyles({
       display: "none",
     },
   },
+  hamburguerLinkOpened: {},
+  hamburguerLinkClosed: {
+    display: "none",
+  },
 });
 
 export { useStyles };

@@ -15,11 +15,9 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Box>
-              <MainLayout>
-                <Route exact path="home" component={Home} />
-              </MainLayout>
-            </Box>
+            <MainLayout>
+              <Home />
+            </MainLayout>
           </Route>
           <Route exact path={["/user"]}>
             <Route path="/" component={Hola} />

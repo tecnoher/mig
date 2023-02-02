@@ -1,6 +1,6 @@
 import Container from "@material-ui/core/Container";
 import React, { useState } from "react";
-import PersonIcon from "@material-ui/icons/Person";
+import MenuIcon from "@material-ui/icons/Menu";
 import Typography from "@mui/material/Typography";
 import { Box } from "@material-ui/core";
 import { useStyles } from "./styles";
@@ -41,7 +41,7 @@ const Header: React.FC = (props) => {
             })}
           </Box>
           <Box onClick={() => setShowMenu(!showMenu)}>
-            <PersonIcon fontSize="large" className={classes.icon} />
+            <MenuIcon fontSize="large" className={classes.icon} />
           </Box>
         </Box>
         <Box

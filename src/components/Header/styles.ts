@@ -5,10 +5,11 @@ const useStyles = makeStyles({
   header: {
     backgroundColor: "rgba(0, 0, 0, 0.5)",
     boxShadow: "1px 1px 5px 0px var(--grey)",
-    position: "sticky",
+    position: "fixed",
     top: 0,
     width: "100%",
     padding: "10px 0px",
+    zIndex: 9999,
   },
   navContainer: {
     display: "flex",

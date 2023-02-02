@@ -5,7 +5,6 @@ const useStyles = makeStyles({
   parent: {
     display: "flex",
     flexDirection: "column",
-    height: "100vh",
     backgroundColor: "#222222",
   },
   main: {

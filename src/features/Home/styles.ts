@@ -22,7 +22,7 @@ const useStyles = makeStyles({
   },
   mobileInputContainer: {
     display: "none",
-    "@media (max-width: 780px)": {
+    /* "@media (max-width: 780px)": {
       backgroundColor: "#363636",
       position: "relative",
       display: "flex",
@@ -31,7 +31,7 @@ const useStyles = makeStyles({
       marginLeft: 20,
       borderRadius: 12,
       margin: "20px 0px",
-    },
+    }, */
   },
   cutCirle: {
     backgroundColor: "#222222",

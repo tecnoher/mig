@@ -20,6 +20,29 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
   },
+  mobileInputContainer: {
+    display: "none",
+    "@media (max-width: 780px)": {
+      backgroundColor: "#363636",
+      position: "relative",
+      display: "flex",
+      justifyContent: "end",
+      padding: 30,
+      marginLeft: 20,
+      borderRadius: 12,
+      margin: "20px 0px",
+    },
+  },
+  cutCirle: {
+    backgroundColor: "#222222",
+    position: "absolute",
+    top: "50%",
+    transform: "translate(-50%, -50%)",
+    left: 0,
+    display: "flex",
+    padding: 10,
+    borderRadius: "50%",
+  },
   headerMainText: {
     color: "#EB1D36",
     fontWeight: "bolder",
@@ -27,7 +50,40 @@ const useStyles = makeStyles({
   headerSecondaryText: {
     color: "white",
   },
+  filterNameText: {
+    display: "none",
+    "@media (max-width: 780px)": {
+      color: "#EB1D36",
+      marginTop: 10,
+    },
+  },
+  mobileFilterContainer: {
+    display: "none",
+    "@media (max-width: 780px)": {
+      backgroundColor: "black",
+      marginTop: 10,
+      display: "flex",
+      gap: 10,
+      padding: "5px 13px",
+      alignItems: "center",
+    },
+  },
+  filtorIcon: {
+    color: "#EB1D36",
+    marginLeft: "auto",
+  },
   filterContainer: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    gap: 20,
+    color: "white",
+    backgroundColor: "black",
+    padding: "10px 20px",
+    marginBottom: 20,
+    "@media (max-width: 780px)": {},
+  },
+  filterContainerOpened: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
@@ -35,7 +91,6 @@ const useStyles = makeStyles({
     color: "white",
     backgroundColor: "black",
     padding: "10px 20px",
-    margin: "20px 0px",
     "@media (max-width: 780px)": {
       display: "none",
     },
@@ -47,8 +102,8 @@ const useStyles = makeStyles({
   mainBodyContainer: {
     display: "flex",
     flexDirection: "row",
-    marginTop: 30,
     gap: 30,
+    marginTop: 20,
     padding: "0px 30px",
     "@media (max-width: 780px)": {
       flexDirection: "column",

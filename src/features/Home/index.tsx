@@ -1,4 +1,8 @@
 import { CustomCard } from "@components";
+import MenuOpenIcon from "@material-ui/icons/MenuOpen";
+import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
+import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
+import RoomIcon from "@material-ui/icons/Room";
 import {
   Box,
   Container,
@@ -7,7 +11,7 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { useStyles } from "./styles";
 
 interface CountryList {
@@ -16,6 +20,7 @@ interface CountryList {
 }
 
 const Home: FC = () => {
+  const [isFilterOpen, setIsFilterOpen] = useState<boolean>(false);
   const filters: string[] = [
     "Lorem Ipsum",
     "Lorem Ipsum",
@@ -139,6 +144,10 @@ const Home: FC = () => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
+  const handleOpenFilters = () => {
+    setIsFilterOpen(!isFilterOpen);
+  };
+
   return (
     <>
       <Box className={classes.headerBG}>
@@ -152,7 +161,45 @@ const Home: FC = () => {
         </Box>
       </Box>
       <Container>
-        <Box className={classes.filterContainer}>
+        <Box className={classes.mobileInputContainer}>
+          <Box className={classes.cutCirle}>
+            <RoomIcon style={{ width: 50, height: 50, color: "#EB1D36" }} />
+          </Box>
+          <TextField
+            fullWidth
+            id="outlined-basic"
+            label="Lorem Ipsum"
+            variant="outlined"
+            style={{ marginLeft: 50 }}
+          />
+        </Box>
+        <Typography variant="body1" className={classes.filterNameText}>
+          Lorem ipsum
+        </Typography>
+        <Box
+          className={classes.mobileFilterContainer}
+          onClick={handleOpenFilters}
+        >
+          <MenuOpenIcon className={classes.headerSecondaryText} />
+          <Typography variant="body1" style={{ color: "white" }}>
+            Filtrar
+          </Typography>
+          {isFilterOpen ? (
+            <ArrowDropUpIcon fontSize="large" className={classes.filtorIcon} />
+          ) : (
+            <ArrowDropDownIcon
+              fontSize="large"
+              className={classes.filtorIcon}
+            />
+          )}
+        </Box>
+        <Box
+          className={
+            isFilterOpen
+              ? classes.filterContainer
+              : classes.filterContainerOpened
+          }
+        >
           {filters.map((item, index) => {
             return (
               <Typography

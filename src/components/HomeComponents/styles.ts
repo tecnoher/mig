@@ -2,7 +2,13 @@ import { makeStyles } from "@material-ui/core/styles";
 import { isAbsolute } from "path";
 
 const useStyles = makeStyles({
-  card: { position: "relative", overflow: "hidden", width: "45%" },
+  card: {
+    position: "relative",
+    overflow: "hidden",
+    "@media (max-width: 780px)": {
+      width: "45%",
+    },
+  },
   cardImage: {
     position: "relative",
     width: "100%",
@@ -28,15 +34,15 @@ const useStyles = makeStyles({
   lazzo: {
     position: "absolute",
     backgroundColor: "white",
-    width: 200,
+    width: 300,
     textAlign: "center",
     top: 15,
-    right: 60,
+    right: 15,
     padding: "3px 0px",
     transform: "rotate(-45deg)",
     "@media (max-width: 780px)": {
       top: 15,
-      right: 35,
+      right: 0,
     },
   },
   starContainer: {

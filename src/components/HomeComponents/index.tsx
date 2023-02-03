@@ -1,5 +1,7 @@
+import StarBorderIcon from "@material-ui/icons/StarBorder";
+import { Box, Typography } from "@mui/material";
+import StarIcon from "@material-ui/icons/Star";
 import { useStyles } from "./styles";
-import { Box } from "@mui/material";
 import { FC } from "react";
 
 interface HomeCardProps {
@@ -17,8 +19,26 @@ const CustomCard: FC<HomeCardProps> = ({
 }) => {
   const classes = useStyles();
   return (
-    <Box>
-      <img src={image} alt="" style={{ position: "relative" }} />
+    <Box className={classes.card}>
+      <img src={image} alt="" className={classes.cardImage} />
+      <Box className={classes.cardTextContainer}>
+        <Typography variant="h5">{title}</Typography>
+        <Typography variant="h6">{country}</Typography>
+      </Box>
+      <Box className={classes.lazzo}>
+        <Typography variant="body1" color="initial">
+          IPSUM
+        </Typography>
+      </Box>
+      {favorited ? (
+        <Box className={classes.starContainer}>
+          <StarIcon />
+        </Box>
+      ) : (
+        <Box className={classes.starContainer}>
+          <StarBorderIcon />
+        </Box>
+      )}
     </Box>
   );
 };

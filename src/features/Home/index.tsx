@@ -201,15 +201,8 @@ const Home: FC = () => {
           })}
         </Box>
         <Box className={classes.middlePanel}>
-          <Box
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: 10,
-              justifyContent: "center",
-            }}
-          >
-            {Array.from({ length: 60 }, (_, i) => (
+          <Box className={classes.cardContainer}>
+            {Array.from({ length: 40 }, (_, i) => (
               <CustomCard
                 key={i}
                 title="Name"
@@ -222,7 +215,14 @@ const Home: FC = () => {
         </Box>
         <Box className={classes.rightPanel}>
           {rightPanel.map((item, index) => {
-            return <img key={index} src={item} alt="" />;
+            return (
+              <img
+                key={index}
+                src={item}
+                alt=""
+                className={classes.leftPanelImages}
+              />
+            );
           })}
         </Box>
       </Box>

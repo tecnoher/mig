@@ -43,7 +43,7 @@ const useStyles = makeStyles({
     backgroundColor: "#2C2C2C",
     "@media (max-width: 780px)": {
       height: 1.6,
-      width: 400,
+      width: "90%",
     },
   },
   underFooter: {

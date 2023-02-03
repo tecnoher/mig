@@ -4,10 +4,6 @@ import { BackdropProvider } from "@contexts";
 import { Home } from "./Home";
 import { Hola } from "./Hola";
 import { MainLayout } from "@components";
-import UserAppRoutes from "./Routes/UserAppRoutes";
-import MainAppRoutes from "./Routes/MainAppRoutes";
-import { Box } from "@material-ui/core";
-import { Helmet } from "react-helmet";
 
 function App() {
   return (

@@ -36,6 +36,9 @@ const useStyles = makeStyles({
     backgroundColor: "black",
     padding: "10px 20px",
     margin: "20px 0px",
+    "@media (max-width: 780px)": {
+      display: "none",
+    },
   },
   filterButtons: {
     cursor: "pointer",
@@ -44,10 +47,12 @@ const useStyles = makeStyles({
   mainBodyContainer: {
     display: "flex",
     flexDirection: "row",
+    marginTop: 30,
     gap: 30,
     padding: "0px 30px",
     "@media (max-width: 780px)": {
       flexDirection: "column",
+      padding: "0px 0px",
     },
   },
   leftPanel: {
@@ -67,6 +72,20 @@ const useStyles = makeStyles({
   middlePanel: {
     width: "65%",
     marginBottom: 30,
+    "@media (max-width: 780px)": {
+      width: "100%",
+    },
+  },
+  cardContainer: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    width: "100%",
+    gap: 10,
+    justifyContent: "center",
+    "@media (max-width: 780px)": {
+      gap: 5,
+    },
   },
   rightPanel: {
     display: "flex",
@@ -76,6 +95,13 @@ const useStyles = makeStyles({
     gap: 20,
     "@media (max-width: 780px)": {
       width: "100%",
+    },
+  },
+  leftPanelImages: {
+    "@media (max-width: 780px)": {
+      maxHeight: 300,
+      width: "100%",
+      objectFit: "cover",
     },
   },
 });

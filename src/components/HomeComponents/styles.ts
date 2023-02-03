@@ -34,6 +34,10 @@ const useStyles = makeStyles({
     right: 60,
     padding: "3px 0px",
     transform: "rotate(-45deg)",
+    "@media (max-width: 780px)": {
+      top: 15,
+      right: 35,
+    },
   },
   starContainer: {
     position: "absolute",

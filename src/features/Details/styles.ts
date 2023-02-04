@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     color: "white",
     "@media (max-width: 780px)": {
       flexDirection: "column",
-      padding: "0px 0px",
+      padding: "0px 10px",
     },
   },
   middlePanel: {
@@ -25,6 +25,11 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
+    gap: 10,
+    margin: "10px 0px",
+    "@media (max-width: 780px)": {
+      flexDirection: "column",
+    },
   },
   cardContainer: {
     width: "40%",
@@ -35,7 +40,6 @@ const useStyles = makeStyles({
   detailsContainer: {
     width: "55%",
     backgroundColor: "#363636",
-    margin: "5px 10px",
     display: "flex",
     flexDirection: "column",
     color: "white",
@@ -52,18 +56,39 @@ const useStyles = makeStyles({
     display: "flex",
     flexWrap: "wrap",
     gap: 2,
+    "@media (max-width: 780px)": {
+      width: "100%",
+    },
   },
   contactContainer: {
     backgroundColor: "#363636",
     width: "55%",
-    margin: "1px 5px",
-    padding: 20,
+    "@media (max-width: 780px)": {
+      width: "100%",
+    },
   },
   contactButton: {
     textAlign: "center",
     backgroundColor: "#EB1D36",
-    padding: "15px 0px",
     cursor: "pointer",
+  },
+  images: {
+    width: "33%",
+    "@media (max-width: 780px)": {
+      display: "none",
+    },
+  },
+  firstTable: {
+    width: "40%",
+    "@media (max-width: 780px)": {
+      width: "100%",
+    },
+  },
+  secondTable: {
+    width: "55%",
+    "@media (max-width: 780px)": {
+      width: "100%",
+    },
   },
 });
 

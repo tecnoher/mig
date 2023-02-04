@@ -9,6 +9,13 @@ const useStyles = makeStyles({
       width: "45%",
     },
   },
+  bigCard: {
+    position: "relative",
+    overflow: "hidden",
+    "@media (max-width: 780px)": {
+      width: "100%",
+    },
+  },
   cardImage: {
     position: "relative",
     width: "100%",
@@ -31,6 +38,19 @@ const useStyles = makeStyles({
     textAlign: "center",
     color: "white",
   },
+  lazzo: {
+    position: "absolute",
+    backgroundColor: "white",
+    width: 300,
+    textAlign: "center",
+    top: "5%",
+    right: "50%",
+    padding: "3px 0px",
+    transform: "rotate(-45deg)",
+    "@media (max-width: 780px)": {
+      top: "7%",
+    },
+  },
   smallLazzo: {
     position: "absolute",
     backgroundColor: "white",
@@ -43,19 +63,6 @@ const useStyles = makeStyles({
     "@media (max-width: 780px)": {
       top: "8%",
       right: "15%",
-    },
-  },
-  lazzo: {
-    position: "absolute",
-    backgroundColor: "white",
-    width: 300,
-    textAlign: "center",
-    top: "5%",
-    right: "50%",
-    padding: "3px 0px",
-    transform: "rotate(-45deg)",
-    "@media (max-width: 780px)": {
-      top: "15%",
     },
   },
   starContainer: {

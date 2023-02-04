@@ -21,9 +21,8 @@ const CustomCard: FC<HomeCardProps> = ({
 }) => {
   const classes = useStyles();
   return (
-    <Box className={classes.card}>
+    <Box className={isDetailScreen ? classes.bigCard : classes.card}>
       <img src={image} alt="" className={classes.cardImage} />
-
       <Box className={isDetailScreen ? classes.lazzo : classes.smallLazzo}>
         <Typography variant="body1" color="initial">
           IPSUM

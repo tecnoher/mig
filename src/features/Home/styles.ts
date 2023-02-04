@@ -110,20 +110,6 @@ const useStyles = makeStyles({
       padding: "0px 0px",
     },
   },
-  leftPanel: {
-    backgroundColor: "#363636",
-    padding: "20px 20px",
-    width: "15%",
-    marginBottom: 30,
-    "@media (max-width: 780px)": {
-      display: "none",
-    },
-  },
-  countryContainer: {
-    display: "flex",
-    padding: "5px 10px",
-    gap: 10,
-  },
   middlePanel: {
     width: "65%",
     marginBottom: 30,
@@ -140,23 +126,6 @@ const useStyles = makeStyles({
     justifyContent: "center",
     "@media (max-width: 780px)": {
       gap: 5,
-    },
-  },
-  rightPanel: {
-    display: "flex",
-    flexDirection: "column",
-    width: "20%",
-    marginBottom: 30,
-    gap: 20,
-    "@media (max-width: 780px)": {
-      width: "100%",
-    },
-  },
-  leftPanelImages: {
-    "@media (max-width: 780px)": {
-      maxHeight: 300,
-      width: "100%",
-      objectFit: "cover",
     },
   },
 });

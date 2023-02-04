@@ -32,6 +32,17 @@ const useStyles = makeStyles({
     fontFamily: "Verdana",
     fontWeight: 600,
   },
+  mainBodyContainer: {
+    display: "flex",
+    flexDirection: "row",
+    gap: 30,
+    marginTop: 20,
+    padding: "0px 30px",
+    "@media (max-width: 780px)": {
+      flexDirection: "column",
+      padding: "0px 0px",
+    },
+  },
 });
 
 export { useStyles };

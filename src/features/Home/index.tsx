@@ -1,4 +1,4 @@
-import { CustomCard } from "@components";
+import { CustomCard, LeftPanel, RightPanel } from "@components";
 import MenuOpenIcon from "@material-ui/icons/MenuOpen";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
@@ -14,11 +14,6 @@ import {
 import React, { FC, useState } from "react";
 import { useStyles } from "./styles";
 
-interface CountryList {
-  continent: string;
-  countries: string[];
-}
-
 const Home: FC = () => {
   const [isFilterOpen, setIsFilterOpen] = useState<boolean>(false);
   const filters: string[] = [
@@ -29,115 +24,7 @@ const Home: FC = () => {
     "Lorem Ipsum",
     "Lorem Ipsum",
   ];
-  const rightPanel: string[] = [
-    "/rightpanel/1.png",
-    "/rightpanel/2.png",
-    "/rightpanel/3.png",
-    "/rightpanel/4.png",
-    "/rightpanel/5.png",
-  ];
-  const leftPanel: CountryList[] = [
-    {
-      continent: "Continent x",
-      countries: [
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-      ],
-    },
-    {
-      continent: "Continent x",
-      countries: [
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-      ],
-    },
-    {
-      continent: "Continent x",
-      countries: [
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-      ],
-    },
-    {
-      continent: "Continent x",
-      countries: [
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-      ],
-    },
-    {
-      continent: "Continent x",
-      countries: [
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-        "Lorem Ipsum",
-      ],
-    },
-  ];
+
   const classes = useStyles();
 
   function randomInt(min: number, max: number) {
@@ -214,39 +101,8 @@ const Home: FC = () => {
         </Box>
       </Container>
       <Box className={classes.mainBodyContainer}>
-        <Box className={classes.leftPanel}>
-          <TextField
-            fullWidth
-            id="outlined-basic"
-            label="Lorem Ipsum"
-            variant="outlined"
-          />
-          {leftPanel.map((item, index) => {
-            return (
-              <>
-                <Box key={index}>
-                  <Typography
-                    variant="h6"
-                    style={{ color: "white", marginTop: 20 }}
-                  >
-                    {item.continent}
-                  </Typography>
-                </Box>
-                <Divider />
-                {item.countries.map((country, i) => {
-                  return (
-                    <Box key={i} className={classes.countryContainer}>
-                      <img src={`/flags/${randomInt(1, 4)}.png`} alt="" />
-                      <Typography variant="body1" style={{ color: "white" }}>
-                        {country}
-                      </Typography>
-                    </Box>
-                  );
-                })}
-              </>
-            );
-          })}
-        </Box>
+        {/* LEFT PANEL */}
+        <LeftPanel />
         <Box className={classes.middlePanel}>
           <Box className={classes.cardContainer}>
             {Array.from({ length: 40 }, (_, i) => (
@@ -256,22 +112,13 @@ const Home: FC = () => {
                 country="Country"
                 favorited={false}
                 image={`/cards/${randomInt(1, 5)}.png`}
+                isDetailScreen={false}
               />
             ))}
           </Box>
         </Box>
-        <Box className={classes.rightPanel}>
-          {rightPanel.map((item, index) => {
-            return (
-              <img
-                key={index}
-                src={item}
-                alt=""
-                className={classes.leftPanelImages}
-              />
-            );
-          })}
-        </Box>
+        {/* RIGHT PANEL */}
+        <RightPanel />
       </Box>
     </>
   );

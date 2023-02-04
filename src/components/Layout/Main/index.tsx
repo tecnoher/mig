@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Header, Footer } from "@components";
+import { Header, Footer, LeftPanel, RightPanel } from "@components";
 import { useStyles } from "./styles";
 import Box from "@material-ui/core/Box/Box";
 

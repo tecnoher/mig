@@ -4,6 +4,7 @@ import { BackdropProvider } from "@contexts";
 import { Home } from "./Home";
 import { Hola } from "./Hola";
 import { MainLayout } from "@components";
+import { Details } from "./Details";
 
 function App() {
   return (
@@ -13,6 +14,11 @@ function App() {
           <Route exact path="/">
             <MainLayout>
               <Home />
+            </MainLayout>
+          </Route>
+          <Route exact path="/details">
+            <MainLayout>
+              <Details />
             </MainLayout>
           </Route>
           <Route exact path={["/user"]}>

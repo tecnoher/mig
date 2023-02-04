@@ -9,6 +9,7 @@ interface HomeCardProps {
   country: string;
   favorited: boolean;
   image: string;
+  isDetailScreen: boolean;
 }
 
 const CustomCard: FC<HomeCardProps> = ({
@@ -16,28 +17,34 @@ const CustomCard: FC<HomeCardProps> = ({
   country,
   favorited,
   image,
+  isDetailScreen,
 }) => {
   const classes = useStyles();
   return (
     <Box className={classes.card}>
       <img src={image} alt="" className={classes.cardImage} />
-      <Box className={classes.cardTextContainer}>
-        <Typography variant="h5">{title}</Typography>
-        <Typography variant="h6">{country}</Typography>
-      </Box>
-      <Box className={classes.lazzo}>
+
+      <Box className={isDetailScreen ? classes.lazzo : classes.smallLazzo}>
         <Typography variant="body1" color="initial">
           IPSUM
         </Typography>
       </Box>
-      {favorited ? (
-        <Box className={classes.starContainer}>
-          <StarIcon />
-        </Box>
-      ) : (
-        <Box className={classes.starContainer}>
-          <StarBorderIcon />
-        </Box>
+      {!isDetailScreen && (
+        <>
+          <Box className={classes.cardTextContainer}>
+            <Typography variant="h5">{title}</Typography>
+            <Typography variant="h6">{country}</Typography>
+          </Box>
+          {favorited ? (
+            <Box className={classes.starContainer}>
+              <StarIcon />
+            </Box>
+          ) : (
+            <Box className={classes.starContainer}>
+              <StarBorderIcon />
+            </Box>
+          )}
+        </>
       )}
     </Box>
   );

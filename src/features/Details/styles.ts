@@ -27,13 +27,13 @@ const useStyles = makeStyles({
     flexWrap: "wrap",
     gap: 10,
     margin: "10px 0px",
-    "@media (max-width: 780px)": {
+    "@media (max-width: 1000px)": {
       flexDirection: "column",
     },
   },
   cardContainer: {
     width: "40%",
-    "@media (max-width: 780px)": {
+    "@media (max-width: 1000px)": {
       width: "100%",
     },
   },
@@ -43,7 +43,7 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     color: "white",
-    "@media (max-width: 780px)": {
+    "@media (max-width: 1000px)": {
       width: "100%",
     },
   },
@@ -56,14 +56,14 @@ const useStyles = makeStyles({
     display: "flex",
     flexWrap: "wrap",
     gap: 2,
-    "@media (max-width: 780px)": {
+    "@media (max-width: 1000px)": {
       width: "100%",
     },
   },
   contactContainer: {
     backgroundColor: "#363636",
     width: "55%",
-    "@media (max-width: 780px)": {
+    "@media (max-width: 1000px)": {
       width: "100%",
     },
   },
@@ -80,13 +80,13 @@ const useStyles = makeStyles({
   },
   firstTable: {
     width: "40%",
-    "@media (max-width: 780px)": {
+    "@media (max-width: 1000px)": {
       width: "100%",
     },
   },
   secondTable: {
     width: "55%",
-    "@media (max-width: 780px)": {
+    "@media (max-width: 1000px)": {
       width: "100%",
     },
   },

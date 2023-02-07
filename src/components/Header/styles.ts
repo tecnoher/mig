@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     top: 0,
     width: "100%",
     padding: "10px 0px",
-    zIndex: 9999,
+    zIndex: 100,
   },
   navContainer: {
     display: "flex",

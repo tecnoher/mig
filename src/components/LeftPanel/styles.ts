@@ -7,7 +7,7 @@ const useStyles = makeStyles({
     padding: "20px 20px",
     width: "15%",
     marginBottom: 30,
-    "@media (max-width: 780px)": {
+    "@media (max-width: 1000px)": {
       display: "none",
     },
   },

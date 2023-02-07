@@ -8,6 +8,7 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build",
     "production": "yarn build && serve -s build",
     "start:docker": "docker-compose -f docker-compose.local.yml up -d",

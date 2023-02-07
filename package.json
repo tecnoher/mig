@@ -2,8 +2,7 @@
   "name": "web",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
-  "proxy": "http://localhost:3000",
+  "homepage": "https://tecnoher.github.io/mig/",
   "scripts": {
     "start": "react-scripts start",
     "start:rewired": "react-app-rewired start",

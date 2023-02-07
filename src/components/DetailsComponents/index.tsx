@@ -50,35 +50,21 @@ const DetailsList: FC<Data> = ({ data }) => {
                 padding: "10px 0px",
               }}
             >
-              <Typography
-                variant="body1"
-                style={{ width: "60%", padding: "0px 20px" }}
-              >
+              <Typography variant="body1" className={classes.tableFirstColumn}>
                 {item.name}
               </Typography>
               {item.isTrue ? (
                 <CheckIcon
                   fontSize="large"
-                  style={{
-                    width: "60%",
-                    padding: "0px 20px",
-                    color: "#0EBC69",
-                  }}
+                  className={classes.tableSecondColumnTrue}
                 />
               ) : (
                 <CloseIcon
                   fontSize="large"
-                  style={{
-                    width: "60%",
-                    padding: "0px 20px",
-                    color: "#EB1D36",
-                  }}
+                  className={classes.tableSecondColumnFalse}
                 />
               )}
-              <Typography
-                variant="body1"
-                style={{ width: "20%", padding: "0px 20px" }}
-              >
+              <Typography variant="body1" className={classes.tableThirdtColumn}>
                 {item.price}
               </Typography>
             </Box>

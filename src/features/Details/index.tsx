@@ -130,7 +130,7 @@ const Details: FC = () => {
         <Box className={classes.flexContainer}>
           <Box className={classes.imagesContaienr}>
             {Array.from({ length: 6 }, (_, i) => (
-              <img src="/cards/1.png" style={{ width: "33%" }} />
+              <img src="/cards/1.png" className={classes.images} />
             ))}
           </Box>
           <Box className={classes.contactContainer}>
@@ -140,7 +140,8 @@ const Details: FC = () => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-around",
-                height: "100%",
+                padding: 20,
+                height: "80%",
               }}
             >
               <Typography variant="h5">CONTACT</Typography>
@@ -158,10 +159,10 @@ const Details: FC = () => {
           </Box>
         </Box>
         <Box className={classes.flexContainer}>
-          <Box style={{ width: "40%" }}>
+          <Box className={classes.firstTable}>
             <DetailsList data={firstTable} />
           </Box>
-          <Box style={{ width: "55%" }}>
+          <Box className={classes.secondTable}>
             <DetailsList data={SecondTable} />
           </Box>
         </Box>

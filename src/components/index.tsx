@@ -6,3 +6,4 @@ export { CustomCard } from "./HomeComponents";
 export { LeftPanel } from "./LeftPanel";
 export { RightPanel } from "./RightPanel";
 export { DetailsList } from "./DetailsComponents";
+export { LoginModal } from "./LoginModal";

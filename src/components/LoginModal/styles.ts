@@ -1,0 +1,181 @@
+import { makeStyles } from "@material-ui/core/styles";
+import { isAbsolute } from "path";
+
+const useStyles = makeStyles((theme) => ({
+  modal: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    width: "50%",
+    height: "60%",
+    boxShadow: theme.shadows[5],
+    display: "flex",
+    flexDirection: "row",
+    "@media (max-width: 780px)": {
+      width: "100%",
+      height: "100%",
+      flexDirection: "column",
+      boxShadow: theme.shadows[0],
+    },
+  },
+  leftSection: {
+    width: "50%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundImage: `url(/login.png)`,
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    position: "relative",
+    "@media (max-width: 780px)": {
+      width: "100%",
+      height: "40%",
+    },
+  },
+  leftSectionOverlay: {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    background: "rgba(0, 0, 0, 0.5)",
+  },
+  title: {
+    marginTop: theme.spacing(2),
+    fontWeight: "bold",
+    textAlign: "center",
+    color: "#EB1D36",
+    zIndex: 9999,
+  },
+  subtitle: {
+    marginTop: theme.spacing(1),
+    textAlign: "center",
+    color: "white",
+    padding: "0px 10px",
+    zIndex: 9999,
+  },
+  btnContainer: {
+    position: "absolute",
+    right: 0,
+    bottom: 30,
+    textAlign: "center",
+    color: "white",
+    "@media (max-width: 780px)": {
+      bottom: 0,
+      display: "flex",
+      left: "50%",
+      transform: "translateX(-50%)",
+    },
+  },
+  selectionBtn: {
+    padding: 10,
+    cursor: "pointer",
+  },
+  selectionBtnSelected: {
+    padding: 10,
+    cursor: "pointer",
+    backgroundColor: "#363636",
+  },
+  rightSection: {
+    width: "50%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 60,
+    color: "white",
+    position: "relative",
+    backgroundColor: "#363636",
+    "@media (max-width: 780px)": {
+      width: "90%",
+      height: "100%",
+      padding: 20,
+    },
+  },
+  closeButton: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    margin: 10,
+    backgroundColor: "#EB1D36",
+    color: "white",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: "15%",
+    cursor: "pointer",
+    "&:hover": {
+      backgroundColor: "#FC5C65",
+    },
+    "@media (max-width: 780px)": {
+      display: "none",
+    },
+  },
+  closeButtonMovile: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    margin: 7,
+    backgroundColor: "#EB1D36",
+    color: "white",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: "15%",
+    zIndex: 1000,
+    "&:hover": {
+      backgroundColor: "#FC5C65",
+    },
+    "@media (mix-width: 780px)": {
+      display: "none",
+    },
+  },
+  loginOption: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#222222",
+    width: "96%",
+    padding: "10px 10px",
+    boxShadow: theme.shadows[5],
+    color: "white",
+    borderRadius: 7,
+    marginTop: 15,
+  },
+  opcionImage: {
+    backgroundColor: "#363636",
+    padding: "7px 6px",
+    borderRadius: "50%",
+    marginRight: 50,
+  },
+  optionText: {
+    marginLeft: 20,
+  },
+  image: {
+    width: "100%",
+  },
+  form: {
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 10,
+  },
+  textField: {
+    marginTop: theme.spacing(2),
+  },
+  button: {
+    backgroundColor: "#EB1D36",
+    marginTop: theme.spacing(2),
+    "&:hover": {
+      backgroundColor: "#FC5C65",
+    },
+  },
+}));
+
+export { useStyles };

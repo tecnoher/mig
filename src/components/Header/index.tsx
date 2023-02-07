@@ -4,26 +4,35 @@ import MenuIcon from "@material-ui/icons/Menu";
 import Typography from "@mui/material/Typography";
 import { Box } from "@material-ui/core";
 import { useStyles } from "./styles";
+import { LoginModal } from "../LoginModal";
 
 interface Links {
   linkName: string;
-  linkTo: string;
+  linkAction: () => void;
 }
 
 //const Header: React.FC<HeaderProps> = (props) => {
 const Header: React.FC = (props) => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const [showLoginModal, setShowLoginModal] = useState<boolean>(false);
   const classes = useStyles();
 
   const links: Links[] = [
-    { linkName: "Lorem Ipsum", linkTo: "#" },
-    { linkName: "Lorem Ipsum", linkTo: "#" },
-    { linkName: "Lorem Ipsum", linkTo: "#" },
-    { linkName: "Lorem Ipsum", linkTo: "#" },
+    { linkName: "Lorem Ipsum", linkAction: () => {} },
+    { linkName: "Lorem Ipsum", linkAction: () => {} },
+    { linkName: "Lorem Ipsum", linkAction: () => {} },
+    {
+      linkName: "Login/register",
+      linkAction: () => {
+        console.log("entering");
+        setShowLoginModal(true);
+      },
+    },
   ];
 
   return (
     <header className={classes.header}>
+      <LoginModal open={showLoginModal} setOpen={setShowLoginModal} />
       <Container>
         <Box className={classes.navContainer}>
           <Typography variant="h3" className={classes.linkText}>
@@ -32,7 +41,11 @@ const Header: React.FC = (props) => {
           <Box className={classes.linksContainer}>
             {links.map((item, index) => {
               return (
-                <Box key={index} className={classes.linkButton}>
+                <Box
+                  key={index}
+                  className={classes.linkButton}
+                  onClick={item.linkAction}
+                >
                   <Typography variant="body1" className={classes.linkText}>
                     {item.linkName}
                   </Typography>
@@ -53,7 +66,11 @@ const Header: React.FC = (props) => {
         >
           {links.map((item, index) => {
             return (
-              <Box key={index} className={classes.linkButton}>
+              <Box
+                key={index}
+                className={classes.linkButton}
+                onClick={item.linkAction}
+              >
                 <Typography variant="body1" className={classes.linkText}>
                   {item.linkName}
                 </Typography>

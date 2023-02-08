@@ -75,7 +75,7 @@ const useStyles = makeStyles({
   images: {
     width: "33%",
     "@media (max-width: 780px)": {
-      display: "none",
+      width: "30%",
     },
   },
   firstTable: {

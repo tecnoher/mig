@@ -5,6 +5,7 @@ import { Home } from "./Home";
 import { Hola } from "./Hola";
 import { MainLayout } from "@components";
 import { Details } from "./Details";
+import { AdminDashboard } from "./AdminDashboard";
 
 function App() {
   return (
@@ -19,6 +20,11 @@ function App() {
           <Route exact path="/details">
             <MainLayout>
               <Details />
+            </MainLayout>
+          </Route>
+          <Route exact path="/dashboard">
+            <MainLayout>
+              <AdminDashboard />
             </MainLayout>
           </Route>
           <Route exact path={["/user"]}>

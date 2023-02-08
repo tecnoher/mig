@@ -130,7 +130,7 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       backgroundColor: "#FC5C65",
     },
-    "@media (mix-width: 780px)": {
+    "@media (min-width: 780px)": {
       display: "none",
     },
   },
@@ -168,6 +168,7 @@ const useStyles = makeStyles((theme) => ({
   },
   textField: {
     marginTop: theme.spacing(2),
+    padding: "5px 5px",
   },
   button: {
     backgroundColor: "#EB1D36",

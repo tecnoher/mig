@@ -67,7 +67,7 @@ const LoginModal: React.FC<ModalProps> = ({ open, setOpen }) => {
               <CloseIcon fontSize="large" />
             </Box>
             <Typography variant="h2">LOGO</Typography>
-            <Box className={classes.loginOption}>
+            {/* <Box className={classes.loginOption}>
               <Box className={classes.opcionImage}>
                 <img src="/vector.png" alt="" />
               </Box>
@@ -82,7 +82,7 @@ const LoginModal: React.FC<ModalProps> = ({ open, setOpen }) => {
               <Typography variant="body1" className={classes.optionText}>
                 Ingresar con...
               </Typography>
-            </Box>
+            </Box> */}
             <form className={classes.form}>
               <TextField
                 className={classes.textField}

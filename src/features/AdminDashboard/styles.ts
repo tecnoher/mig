@@ -8,7 +8,7 @@ const useStyles = makeStyles({
     color: "white",
     "@media (max-width: 780px)": {
       padding: "0px 0px",
-      width: "95%",
+      width: "105%",
     },
   },
   leftPanel: {
@@ -19,15 +19,28 @@ const useStyles = makeStyles({
     alignItems: "center",
     gap: 20,
     padding: "20px 0px",
+    "@media (max-width: 780px)": {
+      gap: 5,
+    },
   },
-  RightPanel: { width: "70%", padding: "20px" },
+  rightPanel: {
+    width: "70%",
+    padding: "20px",
+    "@media (max-width: 780px)": {
+      width: "70%",
+      gap: 5,
+    },
+  },
+  leftPanelH4: {
+    fontSize: 12,
+  },
   img: {
     borderRadius: "50%",
     height: 200,
     width: 200,
     "@media (max-width: 780px)": {
       padding: "0px 0px",
-      height: 115,
+      height: 95,
       width: "100%",
     },
   },
@@ -38,14 +51,18 @@ const useStyles = makeStyles({
       cursor: "pointer",
     },
     "@media (max-width: 780px)": {
-      padding: "0px 10px",
+      padding: "0px 0px",
+      fontSize: 12,
     },
   },
   tableHeader: {
     display: "flex",
     flexDirection: "row",
     backgroundColor: "#EB1D36",
-    padding: "8px 20px",
+    padding: "0px 20px",
+    "@media (max-width: 780px)": {
+      padding: "0px 10px",
+    },
   },
   tableBody: {
     backgroundColor: "#363636",
@@ -57,6 +74,11 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "row",
     padding: "8px 20px",
+    "@media (max-width: 780px)": {
+      width: "100%",
+      padding: "8px 10px",
+      fontSize: 10,
+    },
   },
   pagination: {
     marginLeft: 100,
@@ -65,6 +87,12 @@ const useStyles = makeStyles({
       padding: "0px 0px",
       marginLeft: 0,
     },
+  },
+  paginationContainer: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "20px 0px",
   },
 });
 

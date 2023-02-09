@@ -58,6 +58,7 @@ const useStyles = makeStyles({
     gap: 2,
     "@media (max-width: 1000px)": {
       width: "100%",
+      justifyContent: "center",
     },
   },
   contactContainer: {

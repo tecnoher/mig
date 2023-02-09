@@ -2,6 +2,8 @@ import { CustomCard, LeftPanel, RightPanel } from "@components";
 import MenuOpenIcon from "@material-ui/icons/MenuOpen";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
+import WhatsAppIcon from "@material-ui/icons/WhatsApp";
+import TelegramIcon from "@material-ui/icons/Telegram";
 import RoomIcon from "@material-ui/icons/Room";
 import {
   Box,
@@ -12,11 +14,13 @@ import {
   Pagination,
   TextField,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { useStyles } from "./styles";
 
 const AdminDashboard: FC = () => {
+  const [width, setWidth] = useState(window.innerWidth);
   const classes = useStyles();
 
   const links: string[] = [
@@ -41,34 +45,46 @@ const AdminDashboard: FC = () => {
     "Lorem ipsum",
   ];
 
+  useEffect(() => {
+    function handleResize() {
+      console.log(window.innerWidth);
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <Container>
       <Box className={classes.mainContainer}>
         <Box className={classes.leftPanel}>
           <img src="/cards/1.png" alt="" className={classes.img} />
-          <Typography variant="h4">Lorem ipsum</Typography>
-          <Typography variant="h5">Lorem ipsum</Typography>
+          <h4 className={classes.leftPanelH4}>Lorem ipsum</h4>
+          <h4 className={classes.leftPanelH4}>Lorem ipsum</h4>
           {links.map((item, index) => {
             return (
-              <Typography key={index} variant="h6" className={classes.navLinks}>
+              <h4 key={index} className={classes.navLinks}>
                 {item}
-              </Typography>
+              </h4>
             );
           })}
         </Box>
-        <Box className={classes.RightPanel}>
+        <Box className={classes.rightPanel}>
           <Typography variant="h5">Lorem ipsum</Typography>
           <Box>
             <Box className={classes.tableHeader}>
-              <Typography variant="body1" style={{ width: "50%" }}>
+              <h6 className={classes.leftPanelH4} style={{ width: "50%" }}>
                 Lorem ipsum
-              </Typography>
-              <Typography variant="body1" style={{ width: "25%" }}>
+              </h6>
+              <h6 className={classes.leftPanelH4} style={{ width: "25%" }}>
                 Lorem ipsum
-              </Typography>
-              <Typography variant="body1" style={{ width: "25%" }}>
+              </h6>
+              <h6 className={classes.leftPanelH4} style={{ width: "25%" }}>
                 Lorem ipsum
-              </Typography>
+              </h6>
             </Box>
             <Box className={classes.tableBody}>
               {tableContent.map((item, index) => {
@@ -78,21 +94,35 @@ const AdminDashboard: FC = () => {
                       Lorem ipsum
                     </Typography>
                     <Box style={{ width: "25%" }}>
-                      <Button variant="contained" color="info">
-                        Contactar
-                      </Button>
+                      {width < 780 ? (
+                        <>
+                          <WhatsAppIcon />
+                        </>
+                      ) : (
+                        <>
+                          <Button variant="contained" color="info">
+                            Contactar
+                          </Button>
+                        </>
+                      )}
                     </Box>
                     <Box style={{ width: "25%" }}>
-                      <Button variant="contained">Contactar</Button>
+                      {width < 780 ? (
+                        <>
+                          <TelegramIcon />
+                        </>
+                      ) : (
+                        <>
+                          <Button variant="contained">Contactar</Button>
+                        </>
+                      )}
                     </Box>
                   </Box>
                 );
               })}
-              <Pagination
-                count={10}
-                color="primary"
-                className={classes.pagination}
-              />
+              <Box className={classes.paginationContainer}>
+                <Pagination count={10} color="primary" />
+              </Box>
             </Box>
           </Box>
         </Box>

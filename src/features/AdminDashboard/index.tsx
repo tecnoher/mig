@@ -1,21 +1,6 @@
-import { CustomCard, LeftPanel, RightPanel } from "@components";
-import MenuOpenIcon from "@material-ui/icons/MenuOpen";
-import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
-import ArrowDropUpIcon from "@material-ui/icons/ArrowDropUp";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
 import TelegramIcon from "@material-ui/icons/Telegram";
-import RoomIcon from "@material-ui/icons/Room";
-import {
-  Box,
-  Button,
-  Container,
-  Divider,
-  Grid,
-  Pagination,
-  TextField,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { Box, Button, Container, Pagination, Typography } from "@mui/material";
 import React, { FC, useEffect, useState } from "react";
 import { useStyles } from "./styles";
 
@@ -76,13 +61,22 @@ const AdminDashboard: FC = () => {
           <Typography variant="h5">Lorem ipsum</Typography>
           <Box>
             <Box className={classes.tableHeader}>
-              <h6 className={classes.leftPanelH4} style={{ width: "50%" }}>
+              <h6
+                className={classes.leftPanelH4}
+                style={width < 1000 ? { width: "40%" } : { width: "50%" }}
+              >
                 Lorem ipsum
               </h6>
-              <h6 className={classes.leftPanelH4} style={{ width: "25%" }}>
+              <h6
+                className={classes.leftPanelH4}
+                style={width < 1000 ? { width: "30%" } : { width: "25%" }}
+              >
                 Lorem ipsum
               </h6>
-              <h6 className={classes.leftPanelH4} style={{ width: "25%" }}>
+              <h6
+                className={classes.leftPanelH4}
+                style={width < 1000 ? { width: "30%" } : { width: "25%" }}
+              >
                 Lorem ipsum
               </h6>
             </Box>
@@ -90,10 +84,19 @@ const AdminDashboard: FC = () => {
               {tableContent.map((item, index) => {
                 return (
                   <Box key={index} className={classes.tableRow}>
-                    <Typography variant="body1" style={{ width: "50%" }}>
+                    <Typography
+                      variant="body1"
+                      style={
+                        width < 1000
+                          ? { width: "40%", fontSize: 12 }
+                          : { width: "50%" }
+                      }
+                    >
                       Lorem ipsum
                     </Typography>
-                    <Box style={{ width: "25%" }}>
+                    <Box
+                      style={width < 1000 ? { width: "30%" } : { width: "25%" }}
+                    >
                       {width < 780 ? (
                         <>
                           <WhatsAppIcon />
@@ -106,7 +109,9 @@ const AdminDashboard: FC = () => {
                         </>
                       )}
                     </Box>
-                    <Box style={{ width: "25%" }}>
+                    <Box
+                      style={width < 1000 ? { width: "30%" } : { width: "25%" }}
+                    >
                       {width < 780 ? (
                         <>
                           <TelegramIcon />
@@ -121,7 +126,7 @@ const AdminDashboard: FC = () => {
                 );
               })}
               <Box className={classes.paginationContainer}>
-                <Pagination count={10} color="primary" />
+                <Pagination count={3} color="primary" />
               </Box>
             </Box>
           </Box>

@@ -19,6 +19,7 @@ const useStyles = makeStyles({
     alignItems: "center",
     gap: 20,
     padding: "20px 0px",
+    marginBottom: "10px",
     "@media (max-width: 780px)": {
       gap: 5,
     },
@@ -27,6 +28,7 @@ const useStyles = makeStyles({
     width: "70%",
     padding: "20px",
     "@media (max-width: 780px)": {
+      padding: "10px",
       width: "70%",
       gap: 5,
     },
@@ -39,8 +41,7 @@ const useStyles = makeStyles({
     height: 200,
     width: 200,
     "@media (max-width: 780px)": {
-      padding: "0px 0px",
-      height: 95,
+      height: 100,
       width: "100%",
     },
   },

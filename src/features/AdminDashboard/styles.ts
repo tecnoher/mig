@@ -37,12 +37,13 @@ const useStyles = makeStyles({
     fontSize: 12,
   },
   img: {
-    borderRadius: "50%",
-    height: 200,
-    width: 200,
+    height: "auto",
+    clipPath: "circle(45% at center)",
+    width: "80%",
     "@media (max-width: 780px)": {
-      height: 100,
-      width: "100%",
+      height: "auto",
+      width: "90%",
+      objectFit: "cover",
     },
   },
   navLinks: {

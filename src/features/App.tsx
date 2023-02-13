@@ -6,6 +6,9 @@ import { Hola } from "./Hola";
 import { MainLayout } from "@components";
 import { Details } from "./Details";
 import { AdminDashboard } from "./AdminDashboard";
+import { Services } from "./Services";
+import { Memberships } from "./Memberships";
+import { AdminLayout } from "@components";
 
 function App() {
   return (
@@ -23,9 +26,19 @@ function App() {
             </MainLayout>
           </Route>
           <Route exact path="/dashboard">
-            <MainLayout>
+            <AdminLayout>
               <AdminDashboard />
-            </MainLayout>
+            </AdminLayout>
+          </Route>
+          <Route exact path="/services">
+            <AdminLayout>
+              <Services />
+            </AdminLayout>
+          </Route>
+          <Route exact path="/memberships">
+            <AdminLayout>
+              <Memberships />
+            </AdminLayout>
           </Route>
           <Route exact path={["/user"]}>
             <Route path="/" component={Hola} />

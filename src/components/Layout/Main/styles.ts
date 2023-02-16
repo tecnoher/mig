@@ -1,11 +1,12 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { isAbsolute } from "path";
+import { COLORS } from "@constants";
 
 const useStyles = makeStyles({
   parent: {
     display: "flex",
     flexDirection: "column",
-    backgroundColor: "#222222",
+    backgroundColor: COLORS.BG_Dark,
   },
   main: {
     display: "flex",

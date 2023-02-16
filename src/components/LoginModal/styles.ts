@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { isAbsolute } from "path";
+import { COLORS } from "@constants";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -48,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(2),
     fontWeight: "bold",
     textAlign: "center",
-    color: "#EB1D36",
+    color: COLORS.primary,
     zIndex: 9999,
   },
   subtitle: {
@@ -78,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
   selectionBtnSelected: {
     padding: 10,
     cursor: "pointer",
-    backgroundColor: "#363636",
+    backgroundColor: COLORS.BG_Light,
   },
   rightSection: {
     width: "50%",
@@ -89,7 +90,7 @@ const useStyles = makeStyles((theme) => ({
     padding: 60,
     color: "white",
     position: "relative",
-    backgroundColor: "#363636",
+    backgroundColor: COLORS.BG_Light,
     "@media (max-width: 780px)": {
       width: "90%",
       height: "100%",
@@ -101,7 +102,7 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     right: 0,
     margin: 10,
-    backgroundColor: "#EB1D36",
+    backgroundColor: COLORS.primary,
     color: "white",
     display: "flex",
     alignItems: "center",
@@ -120,7 +121,7 @@ const useStyles = makeStyles((theme) => ({
     top: 0,
     right: 0,
     margin: 7,
-    backgroundColor: "#EB1D36",
+    backgroundColor: COLORS.primary,
     color: "white",
     display: "flex",
     alignItems: "center",
@@ -138,7 +139,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#222222",
+    backgroundColor: COLORS.BG_Dark,
     width: "96%",
     padding: "10px 10px",
     boxShadow: theme.shadows[5],
@@ -147,7 +148,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 15,
   },
   opcionImage: {
-    backgroundColor: "#363636",
+    backgroundColor: COLORS.BG_Light,
     padding: "7px 6px",
     borderRadius: "50%",
     marginRight: 50,
@@ -171,7 +172,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "5px 5px",
   },
   button: {
-    backgroundColor: "#EB1D36",
+    backgroundColor: COLORS.primary,
     marginTop: theme.spacing(2),
     "&:hover": {
       backgroundColor: "#FC5C65",

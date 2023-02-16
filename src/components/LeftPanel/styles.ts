@@ -1,9 +1,10 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { isAbsolute } from "path";
+import { COLORS } from "@constants";
 
 const useStyles = makeStyles({
   leftPanel: {
-    backgroundColor: "#363636",
+    backgroundColor: COLORS.BG_Light,
     padding: "20px 20px",
     width: "15%",
     marginBottom: 30,

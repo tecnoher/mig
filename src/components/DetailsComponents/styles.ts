@@ -1,16 +1,17 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { isAbsolute } from "path";
+import { COLORS } from "@constants";
 
 const useStyles = makeStyles({
   container: {
-    backgroundColor: "#363636",
+    backgroundColor: COLORS.BG_Light,
   },
   tableHeader: {
     display: "flex",
     flexDirection: "row",
     gap: 30,
     padding: "10px 0px",
-    backgroundColor: "#EB1D36",
+    backgroundColor: COLORS.primary,
     /* "@media (max-width: 780px)": {
       flexDirection: "column",
       padding: "0px 10px",
@@ -28,7 +29,7 @@ const useStyles = makeStyles({
   tableSecondColumnFalse: {
     width: "20%",
     padding: "0px 20px",
-    color: "#EB1D36",
+    color: COLORS.primary,
   },
   tableThirdtColumn: { width: "20%", padding: "0px 20px" },
 });

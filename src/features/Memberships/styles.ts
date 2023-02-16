@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
+import { COLORS } from "@constants";
 
 const useStyles = makeStyles({
   mainContainer: {
@@ -19,7 +20,7 @@ const useStyles = makeStyles({
   },
   cardContainer: {
     width: "33.33%",
-    backgroundColor: "#363636",
+    backgroundColor: COLORS.BG_Light,
     padding: 15,
     "@media (max-width: 780px)": {
       width: "90%",
@@ -27,7 +28,7 @@ const useStyles = makeStyles({
   },
   bigCardContainer: {
     width: "100%",
-    backgroundColor: "#363636",
+    backgroundColor: COLORS.BG_Light,
   },
   buyBtn: {
     width: 250,

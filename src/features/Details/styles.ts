@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { padding } from "@mui/system";
+import { COLORS } from "@constants";
 
 const useStyles = makeStyles({
   mainContainer: {
@@ -39,7 +40,7 @@ const useStyles = makeStyles({
   },
   detailsContainer: {
     width: "55%",
-    backgroundColor: "#363636",
+    backgroundColor: COLORS.BG_Light,
     display: "flex",
     flexDirection: "column",
     color: "white",
@@ -48,7 +49,7 @@ const useStyles = makeStyles({
     },
   },
   detailHeader: {
-    backgroundColor: "#EB1D36",
+    backgroundColor: COLORS.primary,
     padding: "7px 15px",
   },
   imagesContaienr: {
@@ -62,7 +63,7 @@ const useStyles = makeStyles({
     },
   },
   contactContainer: {
-    backgroundColor: "#363636",
+    backgroundColor: COLORS.BG_Light,
     width: "55%",
     "@media (max-width: 1000px)": {
       width: "100%",
@@ -70,7 +71,7 @@ const useStyles = makeStyles({
   },
   contactButton: {
     textAlign: "center",
-    backgroundColor: "#EB1D36",
+    backgroundColor: COLORS.primary,
     cursor: "pointer",
   },
   images: {

@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
+import { COLORS } from "@constants";
 
 const useStyles = makeStyles({
   mainContainer: {
@@ -15,7 +16,7 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     width: "30%",
-    backgroundColor: "#363636",
+    backgroundColor: COLORS.BG_Light,
     alignItems: "center",
     gap: 20,
     padding: "20px 0px",
@@ -49,7 +50,7 @@ const useStyles = makeStyles({
   navLinks: {
     padding: "5px 30px",
     "&:hover": {
-      background: "#222222",
+      background: COLORS.BG_Dark,
       cursor: "pointer",
     },
     "@media (max-width: 780px)": {
@@ -60,14 +61,14 @@ const useStyles = makeStyles({
   tableHeader: {
     display: "flex",
     flexDirection: "row",
-    backgroundColor: "#EB1D36",
+    backgroundColor: COLORS.primary,
     padding: "0px 20px",
     "@media (max-width: 780px)": {
       padding: "0px 10px",
     },
   },
   tableBody: {
-    backgroundColor: "#363636",
+    backgroundColor: COLORS.BG_Light,
     "& .MuiPagination-root": {
       color: "#ff0000",
     },

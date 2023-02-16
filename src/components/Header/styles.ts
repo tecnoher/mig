@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { isAbsolute } from "path";
+import { COLORS } from "@constants";
 
 const useStyles = makeStyles({
   header: {
@@ -32,7 +33,7 @@ const useStyles = makeStyles({
     padding: "10px 20px",
     borderRadius: 5,
     "&:hover": {
-      background: "#EB1D36",
+      background: COLORS.primary,
       cursor: "pointer",
     },
   },
@@ -40,7 +41,7 @@ const useStyles = makeStyles({
     color: "white",
   },
   icon: {
-    color: "#EB1D36",
+    color: COLORS.primary,
     cursor: "pointer",
     "@media (min-width: 780px)": {
       display: "none",

@@ -1,10 +1,11 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { padding } from "@mui/system";
+import { COLORS } from "@constants";
 
 const useStyles = makeStyles({
   mainContainer: { padding: 20, width: "100%" },
   contentContainer: {
-    backgroundColor: "#363636",
+    backgroundColor: COLORS.BG_Light,
     padding: 10,
     width: "100%",
   },
@@ -26,12 +27,12 @@ const useStyles = makeStyles({
     backgroundColor: "#D9D9D9",
   },
   contactBox: {
-    backgroundColor: "#222222",
+    backgroundColor: COLORS.BG_Dark,
     padding: 14,
   },
   detailsContainer: {
     width: "100%",
-    backgroundColor: "#222222",
+    backgroundColor: COLORS.BG_Dark,
     display: "flex",
     flexDirection: "column",
     color: "white",
@@ -40,7 +41,7 @@ const useStyles = makeStyles({
     },
   },
   detailHeader: {
-    backgroundColor: "#EB1D36",
+    backgroundColor: COLORS.primary,
     padding: "7px 15px",
   },
   table: {

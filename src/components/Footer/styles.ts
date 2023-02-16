@@ -1,9 +1,10 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { isAbsolute } from "path";
+import { COLORS } from "@constants";
 
 const useStyles = makeStyles({
   footer: {
-    backgroundColor: "#363636",
+    backgroundColor: COLORS.BG_Light,
     marginTop: "auto",
   },
   mainCardsContainer: {
@@ -47,7 +48,7 @@ const useStyles = makeStyles({
     },
   },
   underFooter: {
-    backgroundColor: "#1A1A1A",
+    backgroundColor: COLORS.BG_Darker,
     padding: "10px 0px",
     width: "100%",
     textAlign: "center",

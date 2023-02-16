@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { isAbsolute } from "path";
+import { COLORS } from "@constants";
 
 const useStyles = makeStyles({
   card: {
@@ -21,12 +22,12 @@ const useStyles = makeStyles({
     width: "100%",
     borderRadius: 20,
     borderWidth: 2,
-    borderColor: "#222222",
+    borderColor: COLORS.BG_Dark,
     borderStyle: "solid",
     cursor: "pointer",
     "&:hover": {
       borderWidth: 2,
-      borderColor: "#EB1D36",
+      borderColor: COLORS.primary,
       borderStyle: "solid",
     },
   },

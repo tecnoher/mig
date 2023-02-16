@@ -1,5 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { isAbsolute } from "path";
+import { COLORS } from "@constants";
 
 const useStyles = makeStyles({
   cardContainer: {
@@ -9,7 +10,7 @@ const useStyles = makeStyles({
     padding: 5,
   },
   buyBtn: {
-    backgroundColor: "#EB1D36",
+    backgroundColor: COLORS.primary,
     color: "blue",
     margin: 20,
   },

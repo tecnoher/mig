@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
+import { COLORS } from "@constants";
 
 const useStyles = makeStyles({
   headerBG: {
@@ -23,7 +24,7 @@ const useStyles = makeStyles({
   mobileInputContainer: {
     display: "none",
     /* "@media (max-width: 780px)": {
-      backgroundColor: "#363636",
+      backgroundColor: COLORS.BG_Light,
       position: "relative",
       display: "flex",
       justifyContent: "end",
@@ -34,7 +35,7 @@ const useStyles = makeStyles({
     }, */
   },
   cutCirle: {
-    backgroundColor: "#222222",
+    backgroundColor: COLORS.BG_Dark,
     position: "absolute",
     top: "50%",
     transform: "translate(-50%, -50%)",
@@ -44,7 +45,7 @@ const useStyles = makeStyles({
     borderRadius: "50%",
   },
   headerMainText: {
-    color: "#EB1D36",
+    color: COLORS.primary,
     fontWeight: "bolder",
   },
   headerSecondaryText: {
@@ -53,7 +54,7 @@ const useStyles = makeStyles({
   filterNameText: {
     display: "none",
     "@media (max-width: 780px)": {
-      color: "#EB1D36",
+      color: COLORS.primary,
       marginTop: 10,
     },
   },
@@ -69,7 +70,7 @@ const useStyles = makeStyles({
     },
   },
   filtorIcon: {
-    color: "#EB1D36",
+    color: COLORS.primary,
     marginLeft: "auto",
   },
   filterContainer: {

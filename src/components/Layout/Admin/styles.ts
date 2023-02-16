@@ -1,11 +1,12 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { isAbsolute } from "path";
+import { COLORS } from "@constants";
 
 const useStyles = makeStyles({
   parent: {
     display: "flex",
     flexDirection: "column",
-    backgroundColor: "#222222",
+    backgroundColor: COLORS.BG_Dark,
   },
   main: {
     display: "flex",
@@ -67,7 +68,7 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     width: "30%",
-    backgroundColor: "#363636",
+    backgroundColor: COLORS.BG_Light,
     alignItems: "center",
     padding: "100px 0px",
     marginBottom: "10px",
@@ -81,7 +82,7 @@ const useStyles = makeStyles({
   navLinks: {
     padding: "0px 30px",
     "&:hover": {
-      background: "#222222",
+      background: COLORS.BG_Dark,
       cursor: "pointer",
     },
     "@media (max-width: 780px)": {

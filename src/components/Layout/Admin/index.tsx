@@ -40,15 +40,7 @@ const AdminLayout: React.FC<Props> = ({
       </Helmet>
       <Box className={classes.parent}>
         {!hideHeader && <Header />}
-        <Box
-          sx={{
-            px: 20,
-            "@media (max-width: 1000px)": {
-              px: 1,
-              width: "73%",
-            },
-          }}
-        >
+        <Box className={classes.child}>
           <Box className={classes.mainContainer}>
             <Box className={classes.leftPanel}>
               <img src="/cards/1.png" alt="" className={classes.img} />
@@ -62,8 +54,7 @@ const AdminLayout: React.FC<Props> = ({
                 );
               })}
             </Box>
-            <Box sx={{ width: "70%" }}></Box>
-            {children}
+            <Box className={classes.rightPanel}>{children}</Box>
           </Box>
         </Box>
         <Footer />

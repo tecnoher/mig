@@ -82,9 +82,9 @@ const Details: FC = () => {
     <Box className={classes.mainContainer}>
       <LeftPanel />
       <Box className={classes.middlePanel}>
-        <Typography variant="body1" style={{ padding: "20px 0px" }}>
+        <Typography variant="body1" className={classes.middlePanelText}>
           Loren ipsum &gt; loren ipsum &gt;
-          <span style={{ color: "#EB1D36" }}> lorem ipsum</span>
+          <span className={classes.middlePanelSpan}>lorem ipsum</span>
         </Typography>
         <Box className={classes.flexContainer}>
           <Box className={classes.cardContainer}>
@@ -97,26 +97,19 @@ const Details: FC = () => {
             />
           </Box>
           <Box className={classes.detailsContainer}>
-            <Box style={{ margin: 10 }}>
+            <Box className={classes.detailsContainerInnerMargin}>
               <Typography variant="h4">
-                NAME <span style={{ color: "#EB1D36" }}> (00)</span>
+                NAME <span className={classes.middlePanelSpan}>(00)</span>
               </Typography>
               <Typography variant="body1">Country</Typography>
             </Box>
-            <Box style={{ margin: "15px 0px" }}>
+            <Box className={classes.tableHead}>
               <Typography variant="body1" className={classes.detailHeader}>
                 Lorem ipsum
               </Typography>
             </Box>
             {Array.from({ length: 9 }, (_, i) => (
-              <Box
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  padding: "5px 30px",
-                  color: "white",
-                }}
-              >
+              <Box className={classes.tableRow}>
                 <Typography variant="body1">
                   Lorem ipsum : Lorem ipsum
                 </Typography>
@@ -134,16 +127,7 @@ const Details: FC = () => {
             ))}
           </Box>
           <Box className={classes.contactContainer}>
-            <Box
-              style={{
-                color: "white",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-around",
-                padding: 20,
-                height: "80%",
-              }}
-            >
+            <Box className={classes.contactTable}>
               <Typography variant="h5">CONTACT</Typography>
               {Array.from({ length: 3 }, (_, i) => (
                 <Box>

@@ -85,45 +85,26 @@ const Services: FC = () => {
 
   return (
     <Box className={classes.mainContainer}>
-      <Typography variant="h4" sx={{ my: 2, color: "white" }}>
+      <Typography variant="h4" className={classes.pageTitle}>
         Lorem ipsum
       </Typography>
       <Box className={classes.contentContainer}>
-        <Box sx={{ my: 3 }}>
+        <Box className={classes.stepperHeader}>
           <CustomStepper steps={steps} activeStep={step} />
         </Box>
 
         {/* ######################### FIRST STEP ######################### */}
         {step === 0 && (
           <Box className={classes.innerContainer}>
-            <Box
-              sx={{
-                width: "40%",
-                display: "flex",
-                flexDirection: "column",
-                gap: 1,
-                "@media (max-width: 1000px)": {
-                  width: "100%",
-                },
-              }}
-            >
+            <Box className={classes.stepOneformContainer}>
               <Box className={classes.bigImg}></Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "row",
-                  width: "100%",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Box className={classes.smallImages}></Box>
-                <Box className={classes.smallImages}></Box>
+              <Box className={classes.smallImagesContainer}>
                 <Box className={classes.smallImages}></Box>
                 <Box className={classes.smallImages}></Box>
                 <Box className={classes.smallImages}></Box>
                 <Box className={classes.smallImages}></Box>
               </Box>
-              <Box sx={{ width: "100%" }}>
+              <Box className={classes.fullWidth}>
                 <Typography variant="body1">Lorem ipsum</Typography>
                 <TextField
                   fullWidth
@@ -133,38 +114,12 @@ const Services: FC = () => {
                 />
               </Box>
             </Box>
-            <Box
-              sx={{
-                width: "60%",
-                px: 1,
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <Typography variant="h6" sx={{ color: "#EB1D36" }}>
+            <Box className={classes.rowContainer}>
+              <Typography variant="h6" className={classes.primaryColor}>
                 Lorem ipsum
               </Typography>
-              <Box
-                sx={{
-                  display: "flex",
-                  gap: 1,
-                  flexWrap: "wrap",
-                  flexDirection: "row",
-                  width: "100%",
-                  "@media (max-width: 1000px)": {
-                    flexWrap: "no-wrap",
-                    flexDirection: "column",
-                  },
-                }}
-              >
-                <Box
-                  sx={{
-                    width: "45%",
-                    "@media (max-width: 1000px)": {
-                      width: "100%",
-                    },
-                  }}
-                >
+              <Box className={classes.formContainer}>
+                <Box className={classes.inputContainer}>
                   <Typography variant="body1">Lorem ipsum</Typography>
                   <TextField
                     fullWidth
@@ -173,14 +128,7 @@ const Services: FC = () => {
                     variant="outlined"
                   />
                 </Box>
-                <Box
-                  sx={{
-                    width: "45%",
-                    "@media (max-width: 1000px)": {
-                      width: "100%",
-                    },
-                  }}
-                >
+                <Box className={classes.inputContainer}>
                   <Typography variant="body1">Lorem ipsum</Typography>
                   <TextField
                     fullWidth
@@ -189,14 +137,7 @@ const Services: FC = () => {
                     variant="outlined"
                   />
                 </Box>
-                <Box
-                  sx={{
-                    width: "45%",
-                    "@media (max-width: 1000px)": {
-                      width: "100%",
-                    },
-                  }}
-                >
+                <Box className={classes.inputContainer}>
                   <Typography variant="body1">Lorem ipsum</Typography>
                   <TextField
                     fullWidth
@@ -205,14 +146,7 @@ const Services: FC = () => {
                     variant="outlined"
                   />
                 </Box>
-                <Box
-                  sx={{
-                    width: "45%",
-                    "@media (max-width: 1000px)": {
-                      width: "100%",
-                    },
-                  }}
-                >
+                <Box className={classes.inputContainer}>
                   <Typography variant="body1">Lorem ipsum</Typography>
                   <TextField
                     fullWidth
@@ -221,14 +155,7 @@ const Services: FC = () => {
                     variant="outlined"
                   />
                 </Box>
-                <Box
-                  sx={{
-                    width: "45%",
-                    "@media (max-width: 1000px)": {
-                      width: "100%",
-                    },
-                  }}
-                >
+                <Box className={classes.inputContainer}>
                   <Typography variant="body1">Lorem ipsum</Typography>
                   <TextField
                     fullWidth
@@ -237,14 +164,7 @@ const Services: FC = () => {
                     variant="outlined"
                   />
                 </Box>
-                <Box
-                  sx={{
-                    width: "45%",
-                    "@media (max-width: 1000px)": {
-                      width: "100%",
-                    },
-                  }}
-                >
+                <Box className={classes.inputContainer}>
                   <Typography variant="body1">Lorem ipsum</Typography>
                   <TextField
                     fullWidth
@@ -253,14 +173,7 @@ const Services: FC = () => {
                     variant="outlined"
                   />
                 </Box>
-                <Box
-                  sx={{
-                    width: "45%",
-                    "@media (max-width: 1000px)": {
-                      width: "100%",
-                    },
-                  }}
-                >
+                <Box className={classes.inputContainer}>
                   <Typography variant="body1">Lorem ipsum</Typography>
                   <TextField
                     fullWidth
@@ -269,14 +182,7 @@ const Services: FC = () => {
                     variant="outlined"
                   />
                 </Box>
-                <Box
-                  sx={{
-                    width: "45%",
-                    "@media (max-width: 1000px)": {
-                      width: "100%",
-                    },
-                  }}
-                >
+                <Box className={classes.inputContainer}>
                   <Typography variant="body1">Lorem ipsum</Typography>
                   <TextField
                     fullWidth
@@ -285,14 +191,7 @@ const Services: FC = () => {
                     variant="outlined"
                   />
                 </Box>
-                <Box
-                  sx={{
-                    width: "45%",
-                    "@media (max-width: 1000px)": {
-                      width: "100%",
-                    },
-                  }}
-                >
+                <Box className={classes.inputContainer}>
                   <Typography variant="body1">Lorem ipsum</Typography>
                   <TextField
                     fullWidth
@@ -301,14 +200,7 @@ const Services: FC = () => {
                     variant="outlined"
                   />
                 </Box>
-                <Box
-                  sx={{
-                    width: "45%",
-                    "@media (max-width: 1000px)": {
-                      width: "100%",
-                    },
-                  }}
-                >
+                <Box className={classes.inputContainer}>
                   <Typography variant="body1">Lorem ipsum</Typography>
                   <TextField
                     fullWidth
@@ -317,7 +209,7 @@ const Services: FC = () => {
                     variant="outlined"
                   />
                 </Box>
-                <Button variant="contained" sx={{ mx: "auto", mt: 1 }}>
+                <Button variant="contained" className={classes.confirmBtn}>
                   Lorem ipsum
                 </Button>
               </Box>
@@ -328,21 +220,13 @@ const Services: FC = () => {
 
         {/* ######################### SECOND STEP ######################### */}
         {step === 1 && (
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <Box sx={{ width: "60%" }}>
-              <Typography variant="body1" sx={{ color: "#EB1D36", my: 2 }}>
+          <Box className={classes.stepTwoOuterContainer}>
+            <Box className={classes.stepTwoWidth}>
+              <Typography variant="body1" className={classes.primaryColorText}>
                 Lorem ipsum
               </Typography>
-              <Box
-                sx={{
-                  display: "flex",
-                  gap: 1,
-                  flexWrap: "wrap",
-                  flexDirection: "row",
-                  width: "100%",
-                }}
-              >
-                <Box sx={{ width: "45%" }}>
+              <Box className={classes.StepTwoContainer}>
+                <Box className={classes.inputWidth}>
                   <Typography variant="body1">Lorem ipsum</Typography>
                   <TextField
                     fullWidth
@@ -351,7 +235,7 @@ const Services: FC = () => {
                     variant="outlined"
                   />
                 </Box>
-                <Box sx={{ width: "45%" }}>
+                <Box className={classes.inputWidth}>
                   <Typography variant="body1">Lorem ipsum</Typography>
                   <TextField
                     fullWidth
@@ -360,7 +244,7 @@ const Services: FC = () => {
                     variant="outlined"
                   />
                 </Box>
-                <Box sx={{ width: "45%" }}>
+                <Box className={classes.inputWidth}>
                   <Typography variant="body1">Lorem ipsum</Typography>
                   <TextField
                     fullWidth
@@ -370,21 +254,14 @@ const Services: FC = () => {
                   />
                 </Box>
               </Box>
-              <Typography variant="body1" sx={{ color: "#EB1D36", my: 3 }}>
+              <Typography variant="body1" className={classes.primaryColorText}>
                 Lorem ipsum
               </Typography>
               {Array.from({ length: 7 }, (_, i) => (
                 <>
-                  <Box
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      alignItems: "center",
-                      gap: 30,
-                    }}
-                  >
+                  <Box className={classes.stepTwoTable}>
                     <Typography variant="body1">Lorem ipsum</Typography>
-                    <Checkbox {...label} sx={{ ml: "auto" }} />
+                    <Checkbox {...label} className={classes.checkBoxMargin} />
                     <Checkbox {...label} />
                     <Typography variant="body1">$000</Typography>
                   </Box>
@@ -398,22 +275,15 @@ const Services: FC = () => {
 
         {/* ######################### THIRDTH STEP ######################### */}
         {step === 2 && (
-          <Box sx={{ display: "flex", flexDirection: "column", px: 3 }}>
-            <Typography variant="body1" sx={{ color: "#EB1D36", my: 2 }}>
+          <Box className={classes.stepThreeContainer}>
+            <Typography variant="body1" className={classes.textHeader}>
               Lorem ipsum
             </Typography>
-            <Box sx={{ display: "flex", gap: 5 }}>
-              <Box sx={{ width: "50%" }}>
+            <Box className={classes.stepThreeTableContainer}>
+              <Box className={classes.tableWidth}>
                 {Array.from({ length: 7 }, (_, i) => (
                   <>
-                    <Box
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        alignItems: "center",
-                        gap: 30,
-                      }}
-                    >
+                    <Box className={classes.tableContent}>
                       <Typography variant="body1">Lorem ipsum</Typography>
                       <Checkbox {...label} sx={{ ml: "auto" }} />
                       <Checkbox {...label} />
@@ -423,17 +293,10 @@ const Services: FC = () => {
                   </>
                 ))}
               </Box>
-              <Box sx={{ width: "50%" }}>
+              <Box className={classes.tableWidth}>
                 {Array.from({ length: 7 }, (_, i) => (
                   <>
-                    <Box
-                      style={{
-                        display: "flex",
-                        flexDirection: "row",
-                        alignItems: "center",
-                        gap: 30,
-                      }}
-                    >
+                    <Box className={classes.tableContent}>
                       <Typography variant="body1">Lorem ipsum</Typography>
                       <Checkbox {...label} sx={{ ml: "auto" }} />
                       <Checkbox {...label} />
@@ -450,39 +313,10 @@ const Services: FC = () => {
 
         {/* ######################### FOURTH STEP ######################### */}
         {step === 3 && (
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              gap: 2,
-              "@media (max-width: 1000px)": {
-                flexDirection: "column",
-              },
-            }}
-          >
-            <Box
-              sx={{
-                width: "33.33%",
-                display: "flex",
-                flexDirection: "column",
-                gap: 1,
-                "@media (max-width: 1000px)": {
-                  width: "100%",
-                },
-              }}
-            >
+          <Box className={classes.stepFourContainer}>
+            <Box className={classes.stepFourInnerContainer}>
               <Box className={classes.bigImg}></Box>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "row",
-                  width: "100%",
-                  justifyContent: "space-between",
-                  "@media (max-width: 1000px)": {
-                    width: "100%",
-                  },
-                }}
-              >
+              <Box className={classes.stepFourImages}>
                 <Box className={classes.smallImages}></Box>
                 <Box className={classes.smallImages}></Box>
                 <Box className={classes.smallImages}></Box>
@@ -503,18 +337,11 @@ const Services: FC = () => {
                 </Typography>
               </Box>
             </Box>
-            <Box
-              sx={{
-                width: "33.33%",
-                "@media (max-width: 1000px)": {
-                  width: "100%",
-                },
-              }}
-            >
+            <Box className={classes.stepFourInfoBox}>
               <Box className={classes.detailsContainer}>
-                <Box style={{ margin: 10 }}>
+                <Box className={classes.fontMargin}>
                   <Typography variant="h6">
-                    NAME <span style={{ color: "#EB1D36" }}> (00)</span>
+                    NAME <span className={classes.primaryColor}> (00)</span>
                   </Typography>
                   <Typography variant="body1">Country</Typography>
                 </Box>
@@ -524,14 +351,7 @@ const Services: FC = () => {
                   </Typography>
                 </Box>
                 {Array.from({ length: 9 }, (_, i) => (
-                  <Box
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      padding: "5px 30px",
-                      color: "white",
-                    }}
-                  >
+                  <Box className={classes.stepFourTableContent}>
                     <Typography variant="body1">
                       Lorem ipsum : Lorem ipsum
                     </Typography>
@@ -542,7 +362,7 @@ const Services: FC = () => {
                 ))}
               </Box>
             </Box>
-            <Box sx={{ width: "33.33%" }}>
+            <Box className={classes.secondTableWidth}>
               <Box className={classes.table}>
                 <DetailsList data={SecondTable} />
               </Box>
@@ -551,15 +371,7 @@ const Services: FC = () => {
         )}
 
         {/* ######################### FOURTH STEP ######################### */}
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            width: "100%",
-            justifyContent: "space-evenly",
-            py: 4,
-          }}
-        >
+        <Box className={classes.stepperContainer}>
           <Button onClick={handleBack}>Atras</Button>
           <Button onClick={handleNext}>
             {step === 3 ? "Finalizar" : "Siguiente"}

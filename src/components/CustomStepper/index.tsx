@@ -10,7 +10,7 @@ type Steps = {
 const CustomStepper: FC<Steps> = ({ steps, activeStep }) => {
   const classes = useStyles();
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box className={classes.container}>
       <Stepper activeStep={activeStep} alternativeLabel>
         {steps.map((label) => (
           <Step key={label}>

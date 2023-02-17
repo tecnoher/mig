@@ -125,10 +125,7 @@ const LeftPanel = () => {
         return (
           <>
             <Box key={index}>
-              <Typography
-                variant="h6"
-                style={{ color: "white", marginTop: 20 }}
-              >
+              <Typography variant="h6" className={classes.navLinkText}>
                 {item.continent}
               </Typography>
             </Box>
@@ -137,9 +134,7 @@ const LeftPanel = () => {
               return (
                 <Box key={i} className={classes.countryContainer}>
                   <img src={`/flags/${randomInt(1, 4)}.png`} alt="" />
-                  <Typography variant="body1" style={{ color: "white" }}>
-                    {country}
-                  </Typography>
+                  <Typography variant="body1">{country}</Typography>
                 </Box>
               );
             })}

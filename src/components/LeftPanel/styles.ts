@@ -17,6 +17,7 @@ const useStyles = makeStyles({
     padding: "5px 10px",
     gap: 10,
   },
+  navLinkText: { color: "white", marginTop: 20 },
 });
 
 export { useStyles };

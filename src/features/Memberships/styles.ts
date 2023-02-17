@@ -30,9 +30,11 @@ const useStyles = makeStyles({
     width: "100%",
     backgroundColor: COLORS.BG_Light,
   },
+  buyBtnContainer: { textAlign: "center", marginTop: 10, padding: "10px 0px" },
   buyBtn: {
     width: 250,
   },
+  contentContainer: { padding: 10, display: "flex", flexDirection: "column" },
 });
 
 export { useStyles };

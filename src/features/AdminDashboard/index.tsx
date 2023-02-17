@@ -36,42 +36,20 @@ const AdminDashboard: FC = () => {
   return (
     <Box className={classes.rightPanel}>
       <Typography variant="h5">Lorem ipsum</Typography>
-      <Box>
+      <Box className={classes.fullWidth}>
         <Box className={classes.tableHeader}>
-          <h6
-            className={classes.leftPanelH4}
-            style={width < 1000 ? { width: "40%" } : { width: "50%" }}
-          >
-            Lorem ipsum
-          </h6>
-          <h6
-            className={classes.leftPanelH4}
-            style={width < 1000 ? { width: "30%" } : { width: "25%" }}
-          >
-            Lorem ipsum
-          </h6>
-          <h6
-            className={classes.leftPanelH4}
-            style={width < 1000 ? { width: "30%" } : { width: "25%" }}
-          >
-            Lorem ipsum
-          </h6>
+          <h6 className={classes.tableSmallRows}>Lorem ipsum</h6>
+          <h6 className={classes.tableSmallRows}>Lorem ipsum</h6>
+          <h6 className={classes.tableSmallRows}>Lorem ipsum</h6>
         </Box>
         <Box className={classes.tableBody}>
           {tableContent.map((item, index) => {
             return (
               <Box key={index} className={classes.tableRow}>
-                <Typography
-                  variant="body1"
-                  style={
-                    width < 1000
-                      ? { width: "40%", fontSize: 12 }
-                      : { width: "50%" }
-                  }
-                >
+                <Typography variant="body1" className={classes.firstRowFont}>
                   Lorem ipsum
                 </Typography>
-                <Box style={width < 1000 ? { width: "30%" } : { width: "25%" }}>
+                <Box className={classes.tableSmallRows}>
                   {width < 780 ? (
                     <>
                       <WhatsAppIcon />
@@ -84,7 +62,7 @@ const AdminDashboard: FC = () => {
                     </>
                   )}
                 </Box>
-                <Box style={width < 1000 ? { width: "30%" } : { width: "25%" }}>
+                <Box className={classes.tableSmallRows}>
                   {width < 780 ? (
                     <>
                       <TelegramIcon />

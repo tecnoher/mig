@@ -48,7 +48,7 @@ const Home: FC = () => {
         </Box>
       </Box>
       <Container>
-        <Box className={classes.mobileInputContainer}>
+        {/* <Box className={classes.mobileInputContainer}>
           <Box className={classes.cutCirle}>
             <RoomIcon style={{ width: 50, height: 50, color: "#EB1D36" }} />
           </Box>
@@ -59,7 +59,7 @@ const Home: FC = () => {
             variant="outlined"
             style={{ marginLeft: 50 }}
           />
-        </Box>
+        </Box> */}
         <Typography variant="body1" className={classes.filterNameText}>
           Lorem ipsum
         </Typography>
@@ -68,7 +68,7 @@ const Home: FC = () => {
           onClick={handleOpenFilters}
         >
           <MenuOpenIcon className={classes.headerSecondaryText} />
-          <Typography variant="body1" style={{ color: "white" }}>
+          <Typography variant="body1" className={classes.whiteText}>
             Filtrar
           </Typography>
           {isFilterOpen ? (

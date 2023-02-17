@@ -21,35 +21,20 @@ const DetailsList: FC<Data> = ({ data }) => {
   return (
     <Box className={classes.container}>
       <Box className={classes.tableHeader}>
-        <Typography
-          variant="body1"
-          style={{ width: "60%", padding: "0px 20px" }}
-        >
+        <Typography variant="body1" className={classes.tableFirstColumnHeader}>
           Lorem ipsum
         </Typography>
-        <Typography
-          variant="body1"
-          style={{ marginLeft: "auto", width: "20%", padding: "0px 20px" }}
-        >
+        <Typography variant="body1" className={classes.tableSecondColumnHeader}>
           Lorem
         </Typography>
-        <Typography
-          variant="body1"
-          style={{ width: "20%", padding: "0px 20px" }}
-        >
+        <Typography variant="body1" className={classes.tableThirdColumnHeader}>
           Lorem
         </Typography>
       </Box>
       {data.map((item, index) => {
         return (
           <Box key={index}>
-            <Box
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                padding: "10px 0px",
-              }}
-            >
+            <Box className={classes.tableContentContainer}>
               <Typography variant="body1" className={classes.tableFirstColumn}>
                 {item.name}
               </Typography>

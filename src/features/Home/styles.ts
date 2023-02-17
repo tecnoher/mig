@@ -58,6 +58,7 @@ const useStyles = makeStyles({
       marginTop: 10,
     },
   },
+  whiteText: { color: "white" },
   mobileFilterContainer: {
     display: "none",
     "@media (max-width: 780px)": {

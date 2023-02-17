@@ -16,17 +16,11 @@ const useStyles = makeStyles({
     flexGrow: 1,
   },
   child: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    margin: "1%",
-    padding: "20px",
-    fontSize: "20px",
-    lineHeight: "20px",
-    color: "#ffe8c3",
-    backgroundColor: "#eab768",
-    borderRadius: "10px",
-    border: "10px solid #f5cc8b",
+    px: 20,
+    "@media (max-width: 1000px)": {
+      px: 1,
+      width: "94%",
+    },
   },
   body: {
     backgroundColor: "#282c35",
@@ -89,6 +83,9 @@ const useStyles = makeStyles({
       padding: "0px 0px",
       fontSize: 12,
     },
+  },
+  rightPanel: {
+    width: "70%",
   },
 });
 

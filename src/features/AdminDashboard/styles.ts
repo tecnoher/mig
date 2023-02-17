@@ -25,12 +25,13 @@ const useStyles = makeStyles({
       gap: 5,
     },
   },
+  fullWidth: { width: "100%" },
   rightPanel: {
     width: "70%",
-    padding: "20px",
+    padding: "10px",
     "@media (max-width: 780px)": {
       padding: "10px",
-      width: "70%",
+      width: "100%",
       gap: 5,
     },
   },
@@ -81,6 +82,19 @@ const useStyles = makeStyles({
       width: "100%",
       padding: "8px 10px",
       fontSize: 10,
+    },
+  },
+  tableSmallRows: {
+    width: "30%",
+    "@media (max-width: 780px)": {
+      width: "25%",
+    },
+  },
+  firstRowFont: {
+    width: "50%",
+    "@media (max-width: 1000px)": {
+      width: "40%",
+      fontSize: 12,
     },
   },
   pagination: {

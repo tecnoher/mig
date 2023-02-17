@@ -22,6 +22,8 @@ const useStyles = makeStyles({
       width: "100%",
     },
   },
+  middlePanelText: { padding: "20px 0px" },
+  middlePanelSpan: { color: COLORS.primary },
   flexContainer: {
     display: "flex",
     flexDirection: "row",
@@ -48,6 +50,7 @@ const useStyles = makeStyles({
       width: "100%",
     },
   },
+  detailsContainerInnerMargin: { margin: 10 },
   detailHeader: {
     backgroundColor: COLORS.primary,
     padding: "7px 15px",
@@ -69,10 +72,25 @@ const useStyles = makeStyles({
       width: "100%",
     },
   },
+  tableHead: { margin: "15px 0px" },
   contactButton: {
     textAlign: "center",
     backgroundColor: COLORS.primary,
     cursor: "pointer",
+  },
+  tableRow: {
+    display: "flex",
+    justifyContent: "space-between",
+    padding: "5px 30px",
+    color: "white",
+  },
+  contactTable: {
+    color: "white",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-around",
+    padding: 20,
+    height: "80%",
   },
   images: {
     width: "33%",

@@ -67,7 +67,7 @@ const Memberships: FC = () => {
         })}
       </Box>
       <Box className={classes.bigCardContainer}>
-        <Box sx={{ p: 2, display: "flex", flexDirection: "column" }}>
+        <Box className={classes.contentContainer}>
           <Typography variant="h5">Lorem ipsum</Typography>
           <Divider sx={{ my: 2 }} />
           <Typography variant="body1">
@@ -82,7 +82,7 @@ const Memberships: FC = () => {
             years, sometimes by accident, sometimes on purpose (injected humour
             and the like).
           </Typography>
-          <Box sx={{ textAlign: "center", mt: 1, py: 1 }}>
+          <Box className={classes.buyBtnContainer}>
             <Button variant="contained" className={classes.buyBtn}>
               Comprar
             </Button>

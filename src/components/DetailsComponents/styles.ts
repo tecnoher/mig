@@ -12,10 +12,20 @@ const useStyles = makeStyles({
     gap: 30,
     padding: "10px 0px",
     backgroundColor: COLORS.primary,
-    /* "@media (max-width: 780px)": {
-      flexDirection: "column",
-      padding: "0px 10px",
-    }, */
+    "@media (max-width: 780px)": {
+      gap: 40,
+      padding: "10px 0px",
+    },
+  },
+  tableFirstColumnHeader: { width: "60%", paddingLeft: "20px" },
+  tableSecondColumnHeader: {
+    width: "20%",
+  },
+  tableThirdColumnHeader: { width: "20%" },
+  tableContentContainer: {
+    display: "flex",
+    flexDirection: "row",
+    padding: "10px 0px",
   },
   tableFirstColumn: {
     width: "60%",

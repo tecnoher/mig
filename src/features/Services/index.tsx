@@ -26,7 +26,7 @@ interface TableProps {
 }
 
 const Services: FC = () => {
-  const [step, setStep] = useState<number>(1);
+  const [step, setStep] = useState<number>(0);
   const classes = useStyles();
 
   const SecondTable: TableProps[] = [
@@ -99,10 +99,11 @@ const Services: FC = () => {
             <Box className={classes.stepOneformContainer}>
               <Box className={classes.bigImg}></Box>
               <Box className={classes.smallImagesContainer}>
-                <Box className={classes.smallImages}></Box>
-                <Box className={classes.smallImages}></Box>
-                <Box className={classes.smallImages}></Box>
-                <Box className={classes.smallImages}></Box>
+                {Array.from({ length: 7 }, (_, i) => (
+                  <>
+                    <Box className={classes.smallImages}></Box>
+                  </>
+                ))}
               </Box>
               <Box className={classes.fullWidth}>
                 <Typography variant="body1">Lorem ipsum</Typography>
@@ -209,9 +210,11 @@ const Services: FC = () => {
                     variant="outlined"
                   />
                 </Box>
-                <Button variant="contained" className={classes.confirmBtn}>
-                  Lorem ipsum
-                </Button>
+                <Box className={classes.confirmBtnContainer}>
+                  <Button variant="contained" className={classes.confirmBtn}>
+                    Lorem ipsum
+                  </Button>
+                </Box>
               </Box>
             </Box>
           </Box>

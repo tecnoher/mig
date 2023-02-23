@@ -14,6 +14,7 @@ const useStyles = makeStyles({
   innerContainer: {
     display: "flex",
     flexDirection: "row",
+    gap: 20,
     "@media (max-width: 1000px)": {
       flexDirection: "column",
     },
@@ -26,7 +27,7 @@ const useStyles = makeStyles({
   },
   formContainer: {
     display: "flex",
-    gap: 1,
+    gap: 20,
     flexWrap: "wrap",
     flexDirection: "row",
     width: "100%",
@@ -94,9 +95,10 @@ const useStyles = makeStyles({
     flexDirection: "row",
     width: "100%",
     justifyContent: "space-evenly",
-    margin: "15px 0px",
+    margin: "35px 0px",
   },
-  confirmBtn: { marginTop: 20 },
+  confirmBtnContainer: { width: "100%", textAlign: "center" },
+  confirmBtn: { marginTop: 20, backgroundColor: COLORS.primary },
   stepTwoWidth: {
     width: "60%",
     "@media (max-width: 1000px)": {
@@ -105,15 +107,17 @@ const useStyles = makeStyles({
   },
   StepTwoContainer: {
     display: "flex",
-    gap: 1,
+    gap: 20,
     flexWrap: "wrap",
     flexDirection: "row",
     width: "100%",
+    marginBottom: 20,
   },
   stepTwoTable: {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
+    marginTop: 5,
     gap: 30,
     "@media (max-width: 1000px)": {
       gap: 0,
@@ -150,7 +154,7 @@ const useStyles = makeStyles({
   stepFourContainer: {
     display: "flex",
     flexDirection: "row",
-    gap: 2,
+    gap: 20,
     "@media (max-width: 1000px)": {
       flexDirection: "column",
     },
